@@ -10,6 +10,15 @@
       Tap the button below to log-in with Facebook
   </div>
   <div class="btn_container">
-      <button ion-button full (click)="loginAction();">Login with Facebook</button>
+      <ion-button expand="full" (click)="loginAction();">Login with Facebook</ion-button>
+  </div>
+  <div *ngIf="loginSuccess == true;" >
+      <div>
+        <p>User: {{loginData.name}}</p>
+        <p>Id: {{loginData.id}}</p>
+      </div>
+      <div>
+          <ion-button expand="full" (click)="sendMessage();">Send Message</ion-button>
+      </div>
   </div>
 </ion-content> 
